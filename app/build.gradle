@@ -11,6 +11,17 @@ android {
     versionCode 1
     versionName "1.0"
   }
+  productFlavors {
+    before {
+
+    }
+    after {
+
+    }
+    afterSetPrimaryKeyAgain {
+
+    }
+  }
   buildTypes {
     release {
       minifyEnabled false
@@ -31,4 +42,7 @@ dependencies {
   compile 'com.android.support:appcompat-v7:23.1.1'
   compile 'com.facebook.stetho:stetho:1.2.0'
   compile 'com.uphyca:stetho_realm:0.7.2'
+  beforeCompile 'io.realm:realm-android:0.84.1'
+  afterCompile 'io.realm:realm-android:0.85.0'
+  afterSetPrimaryKeyAgainCompile 'io.realm:realm-android:0.85.0'
 }

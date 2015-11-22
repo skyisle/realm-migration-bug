@@ -3,7 +3,6 @@ package com.the42apps.realmmigration;
 import android.app.Application;
 
 import com.facebook.stetho.Stetho;
-import com.the42apps.DbMigration;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 import io.realm.Realm;
@@ -23,7 +22,9 @@ public class App extends Application {
                 .schemaVersion(0)
                 .build();
 
-//        Realm.deleteRealm(config);
+        if (BuildConfig.FLAVOR.equals("before")) {
+            Realm.deleteRealm(config);
+        }
         Realm.setDefaultConfiguration(config);
 
         Stetho.initialize(

@@ -3,7 +3,7 @@ package com.the42apps.realmmigration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.the42apps.realmmigration.model.Person;
+import com.the42apps.realmmigration.model.BPerson;
 
 import java.util.ArrayList;
 
@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Realm realm = Realm.getDefaultInstance();
-        ArrayList<Person> list = new ArrayList<>();
+        ArrayList<BPerson> list = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            Person person = new Person();
+            BPerson person = new BPerson();
             person.setUserId(String.valueOf(i));
             person.setUserName("Alan Jeon " + i);
             person.setBirthYear(1980);
