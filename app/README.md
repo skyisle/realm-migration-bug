@@ -8,7 +8,7 @@
    $ adb logcat
    ```
 
-2. To see pk table scheme changes
+2. See pk table scheme changes with [stetho](http://facebook.github.io/stetho/)
 
    ```
    $ ./gradlew installAfterDebug
